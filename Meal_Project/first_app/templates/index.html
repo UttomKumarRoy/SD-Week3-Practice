@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Meal World
+{% endblock %} 
+{% block content %}
+<div class="row g-4 mt-4">
+    {% for meal in meals %}
+    <div class="col-lg-4 col-sm-12" style="border:2px solid green;margin:30px; width: 18rem;">
+        <div class="card">
+            <img class="card-img-top" src="{{meal.strMealThumb}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{meal.strMeal}}</h5>
+              <p class="card-text">This is a nice meals.</p>
+            </div>
+          </div>
+    </div>
+    {% endfor %}
+</div>
+       
+{% endblock %}

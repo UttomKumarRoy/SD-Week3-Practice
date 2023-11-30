@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3><a href="/">Back to index</a></h3>
+    <p>This is filter page</p>
+    Hi I am {{name | title}}. <br> 
+    I am {{age|add:'2'}} years old. <br> 
+    There is {{ players | length }} players. <br> 
+    {{ name | capfirst }} {{ age | center:"15" }} <br>
+    {{ players | join:" - " }} is a joining output. <br>
+    Today is {{ date | date:"D d M Y" }} or {{ date|date:"SHORT_DATE_FORMAT" }} <br>
+    {{ name | cut:" " }} is cut value. <br>
+    {{ list1 | dictsort:"age" }} <br>
+    {{ players | first }} first<br>
+    {{ players | last }} last<br>
+    Lower: {{ players | lower }} Upper:{{ players | upper }} <br>
+    {{ players | random }} is random output. <br>
+    {{ players | slice:":2" }} <br>
+    wordcount: {{ name | wordcount }}<br>
+    {{ name | make_list }} <br>
+    {{ name | truncatewords:2 }} <br>
+    {{ name | truncatechars:7 }} <br>
+    {{ "I'm a teacher." | addslashes }} <br>
+    {{ age | divisibleby:"3" }}. <br>
+</body>
+</html>
